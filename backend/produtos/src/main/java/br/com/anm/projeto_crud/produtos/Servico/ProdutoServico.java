@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import br.com.anm.projeto_crud.produtos.Modelo.ProdutoModelo;
+import br.com.anm.projeto_crud.produtos.Modelo.RespostaModelo;
 import br.com.anm.projeto_crud.produtos.Repositorio.ProdutoRepositorio;
-import br.com.anm.projeto_crud.produtos.modelo.ProdutoModelo;
-import br.com.anm.projeto_crud.produtos.modelo.RespostaModelo;
 
 @Service
 public class ProdutoServico {
@@ -15,12 +15,11 @@ public class ProdutoServico {
     @Autowired
     private ProdutoRepositorio pr;
 
+    @Autowired
     private RespostaModelo rm;
 
-    //Listar produto
     public Iterable<ProdutoModelo> listar(){
         return pr.findAll();
-
     }
 
     public ResponseEntity <?> cadastrarAlterar(ProdutoModelo pm, String acao){
@@ -45,4 +44,5 @@ public class ProdutoServico {
         rm.setResposta("O produto foi removido com sucesso!");
         return new ResponseEntity<RespostaModelo>(rm, HttpStatus.OK);
     }
+
 }

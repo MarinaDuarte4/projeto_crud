@@ -1,4 +1,4 @@
-package br.com.anm.projeto_crud.produtos.modelo;
+package br.com.anm.projeto_crud.produtos.Modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,17 +8,15 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Getter
 @Setter
 @Table(name = "produtos")
-public class ProdutoModelo {
 
+public class ProdutoModelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
     private String nome;
     private String marca;
-
 }

@@ -1,4 +1,4 @@
-package br.com.anm.projeto_crud.produtos.modelo;
+package br.com.anm.projeto_crud.produtos.Modelo;
 
 import org.springframework.stereotype.Component;
 
