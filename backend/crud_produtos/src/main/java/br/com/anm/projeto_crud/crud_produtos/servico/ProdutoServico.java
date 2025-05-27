@@ -1,24 +1,23 @@
-package br.com.anm.projeto_crud.produtos.Servico;
+package br.com.anm.projeto_crud.crud_produtos.servico;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.anm.projeto_crud.produtos.Modelo.ProdutoModelo;
-import br.com.anm.projeto_crud.produtos.Modelo.RespostaModelo;
-import br.com.anm.projeto_crud.produtos.Repositorio.ProdutoRepositorio;
+import br.com.anm.projeto_crud.crud_produtos.modelo.ProdutoModelo;
+import br.com.anm.projeto_crud.crud_produtos.modelo.RespostaModelo;
+import br.com.anm.projeto_crud.crud_produtos.repositorio.ProdutoRepositorio;
 
 @Service
 public class ProdutoServico {
-    
     @Autowired
     private ProdutoRepositorio pr;
 
     @Autowired
     private RespostaModelo rm;
 
-    public Iterable<ProdutoModelo> listar(){
+    public Iterable<ProdutoModelo> listar() {
         return pr.findAll();
     }
 

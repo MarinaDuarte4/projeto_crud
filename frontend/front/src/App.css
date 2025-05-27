@@ -17,7 +17,6 @@ form input[type="button"]{
 }
 
 form input[type="text"] {
-  width: 90%;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
